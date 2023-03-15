@@ -15,3 +15,5 @@ console.log (Number (sum1.toFixed(3)))
 
 
 console.log (1 +" 2")
+
+console.log(0 || ('0' && {}));
