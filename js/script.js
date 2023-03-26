@@ -1,3 +1,5 @@
+"use strict";
+
 // console.log (Number(true+true)); 
 
 // console.log (0.1+0.3)
@@ -189,14 +191,14 @@
 //Нумерація елементів має починатися з першого.
 //['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']
 
-function logItems (array) {
+// function logItems (array) {
  
-  for (let i = 1; i <= array.length; i += 1){
-console.log(`${i} - ${array[i-1]}`);
+//   for (let i = 1; i <= array.length; i += 1){
+// console.log(`${i} - ${array[i-1]}`);
 
-  }
-}
-logItems(['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']);
+//   }
+// }
+// logItems(['Джаз', 'Блюз', 'Рок-н-рол', 'Реггі', 'Реп']);
 
 
 
