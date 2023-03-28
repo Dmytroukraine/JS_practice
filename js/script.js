@@ -219,3 +219,19 @@
 //Напишіть скрипт, який замінює регістр кожного символу
 //У стрічці на протилежний
 //Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
+
+
+
+
+// const username = "Mango";
+// console.log("Username is",username);
+
+// const message = "JavaScript is awesome!";
+// alert(message);
+
+// const isComing = confirm("Please confirm hotel reservation");
+// console.log(isComing);
+
+// let value = 5;
+// value -= 10;
+// console.log(value);
