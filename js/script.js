@@ -1,10 +1,296 @@
 "use strict";
 
-// console.log (Number(true+true)); 
 
-// console.log (0.1+0.3)
+//  Домашне завдання 6
 
-// console.log (0.1+0.3==0.4)
+
+// 1
+// const categoriesList = document.querySelector('#categories');
+// const categoriesItems = categoriesList.querySelectorAll('.item');
+
+// console.log(`Number of categories: ${categoriesItems.length}\n`);
+
+// categoriesItems.forEach(item => {
+//   const categoryName = item.querySelector('h2').innerText;
+//   const categoryElementsCount = item.querySelector('ul').childElementCount;
+
+//   console.log(`Category: ${categoryName}`);
+//   console.log(`Elements: ${categoryElementsCount}\n`);
+// });
+
+
+
+// 2
+// const ingredients = [
+//   "Potatoes",
+//   "Mushrooms",
+//   "Garlic",
+//   "Tomatos",
+//   "Herbs",
+//   "Condiments",
+// ];
+
+// const ul = document.querySelector('#ingredients');
+
+// const liElements = ingredients.map(ingredient => {
+//   const li = document.createElement('li');
+//   li.textContent = ingredient;
+//   li.classList.add('item');
+//   return li;
+// });
+
+// ul.append(...liElements);
+
+
+
+
+// 3
+// const images = [
+//   {
+//     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+//     alt: "White and Black Long Fur Cat",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Group of Horses Running",
+//   },
+// ];
+
+// const galleryList = document.querySelector('.gallery');
+
+// const imagesMarkup = images.map(({ url, alt }) => {
+//   return `
+//     <li class="gallery__item">
+//       <img class="gallery__img" src="${url}" alt="${alt}">
+//     </li>
+//   `;
+// }).join('');
+
+// galleryList.insertAdjacentHTML('beforeend', imagesMarkup);
+
+
+
+// 4.
+// const counterValue = 0;
+// const valueEl = document.querySelector('#value');
+// const incrementBtn = document.querySelector('[data-action="increment"]');
+// const decrementBtn = document.querySelector('[data-action="decrement"]');
+
+// incrementBtn.addEventListener('click', () => {
+//   valueEl.textContent = ++counterValue;
+// });
+
+// decrementBtn.addEventListener('click', () => {
+//   valueEl.textContent = --counterValue;
+// });
+
+
+
+// 5
+// const input = document.querySelector("#name-input");
+// const output = document.querySelector("#name-output");
+
+// input.addEventListener("input", (event) => {
+//   output.textContent = event.target.value.trim() || "Anonymous";
+// });
+
+
+
+
+// 6
+// <script>
+//   const inputEl = document.querySelector('#validation-input');
+
+//   inputEl.addEventListener('blur', onInputBlur);
+
+//   function onInputBlur(event) {
+//     const inputLength = event.target.value.length;
+//     const requiredLength = Number(event.target.getAttribute('data-length'));
+
+//     if (inputLength === requiredLength) {
+//       inputEl.classList.remove('invalid');
+//       inputEl.classList.add('valid');
+//     } else {
+//       inputEl.classList.remove('valid');
+//       inputEl.classList.add('invalid');
+//     }
+//   }
+// </script>
+
+// CSS
+
+// <style>
+//   #validation-input {
+//     border: 3px solid #bdbdbd;
+//   }
+
+//   #validation-input.valid {
+//     border-color: #4caf50;
+//   }
+
+//   #validation-input.invalid {
+//     border-color: #f44336;
+//   }
+// </style>
+
+
+
+
+// 7
+
+// <script>
+//   const input = document.querySelector('#font-size-control');
+//   const span = document.querySelector('#text');
+  
+//   input.addEventListener('input', event => {
+//     const fontSize = event.currentTarget.value + 'px';
+//     span.style.fontSize = fontSize;
+//   });
+// </script>
+
+
+
+
+// 8
+// const loginForm = document.querySelector('.login-form');
+
+// loginForm.addEventListener('submit', e => {
+//   e.preventDefault(); // запобігає перезавантаженню сторінки при відправленні форми
+
+//   const { email, password } = e.target.elements;
+//   // отримуємо доступ до елементів форми
+
+//   if (email.value.trim() === '' || password.value.trim() === '') {
+//     alert('All fields must be filled!');
+//     return;
+//   }
+//   // перевіряємо, чи всі поля заповнені
+
+//   const formData = {
+//     email: email.value,
+//     password: password.value,
+//   };
+//   console.log(formData); // виводимо об'єкт із введеними даними в консоль
+
+//   e.target.reset(); // очищаємо значення полів форми
+// });
+
+
+
+
+
+// 9
+// <!DOCTYPE html>
+// <html lang="en">
+//   <head>
+//     <meta charset="UTF-8" />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+//     <title>Change Background Color</title>
+//     <style>
+//       body {
+//         transition: background-color 0.5s ease-in-out;
+//       }
+//       .widget {
+//         margin-top: 50px;
+//         text-align: center;
+//       }
+//       .color {
+//         font-weight: bold;
+//       }
+//     </style>
+//   </head>
+//   <body>
+//     <div class="widget">
+//       <p>Background color: <span class="color">-</span></p>
+//       <button type="button" class="change-color">Change color</button>
+//     </div>
+
+//     <script>
+//       const button = document.querySelector(".change-color");
+//       const colorSpan = document.querySelector(".color");
+
+//       function getRandomHexColor() {
+//         return `#${Math.floor(Math.random() * 16777215)
+//           .toString(16)
+//           .padStart(6, 0)}`;
+//       }
+
+//       button.addEventListener("click", () => {
+//         const randomColor = getRandomHexColor();
+//         document.body.style.backgroundColor = randomColor;
+//         colorSpan.textContent = randomColor;
+//       });
+//     </script>
+//   </body>
+// </html>
+
+
+
+
+// 10
+// <div id="controls">
+//   <input type="number" min="1" max="100" step="1" />
+//   <button type="button" data-create>Create</button>
+//   <button type="button" data-destroy>Destroy</button>
+// </div>
+
+// <div id="boxes"></div>
+
+// <script>
+//   const inputEl = document.querySelector('#controls input');
+//   const createBtn = document.querySelector('[data-create]');
+//   const destroyBtn = document.querySelector('[data-destroy]');
+//   const boxesContainer = document.querySelector('#boxes');
+
+//   createBtn.addEventListener('click', createBoxes);
+//   destroyBtn.addEventListener('click', destroyBoxes);
+
+//   function createBoxes() {
+//     const amount = inputEl.valueAsNumber;
+//     const boxes = [];
+
+//     for (let i = 0; i < amount; i += 1) {
+//       const size = 30 + i * 10;
+//       const boxEl = document.createElement('div');
+//       boxEl.style.cssText = `
+//         width: ${size}px;
+//         height: ${size}px;
+//         background-color: ${getRandomHexColor()};
+//         margin-bottom: 10px;
+//       `;
+//       boxes.push(boxEl);
+//     }
+
+//     boxesContainer.append(...boxes);
+//   }
+
+//   function destroyBoxes() {
+//     boxesContainer.innerHTML = '';
+//   }
+
+//   function getRandomHexColor() {
+//     return `#${Math.floor(Math.random() * 16777215)
+//       .toString(16)
+//       .padStart(6, 0)}`;
+//   }
+// </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -265,8 +551,3 @@
 //   // Значення властивості з таким ключем
 //   console.log(book[key]);
 // }
-
-(function (x) {
-    delete x;
-    return x;
-  })(1)
