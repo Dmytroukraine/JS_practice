@@ -551,3 +551,36 @@
 //   // Значення властивості з таким ключем
 //   console.log(book[key]);
 // }
+
+
+
+
+// Колбек-функція
+// function greet(name) {
+//   console.log(`Ласкаво просимо ${name}.`);
+// }
+
+// // Функція вищого порядку
+// function registerGuest(name, callback) {
+//   console.log(`Реєструємо гостя ${name}.`);
+//   callback(name);
+// }
+
+// registerGuest("Манго", greet);
+
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Класичний for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Індекс ${i}, значення ${numbers[i]}`);
+// }
+
+// // Метод перебирання forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+setTimeout(function() {
+  console.log('Цей код виконується через 2 секунди');
+}, 2000);
